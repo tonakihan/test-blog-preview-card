@@ -23,6 +23,11 @@
                 --var-color-bg: var(--var-color-yellow);
                 --var-size-of-footer: 25px;
             }
+            @font-face {
+                font-family: "Figtree";
+                src: url(/assets/fonts/Figtree-VariableFont_wght.ttf)
+                    format("truetype");
+            }
             * {
                 padding: 0;
                 margin: 0;
@@ -30,11 +35,14 @@
             }
             body {
                 background-color: var(--var-color-bg);
-                font-size: 15px;
+                font-size: 16px;
+                font-family: "Figtree";
+                font-weight: 500;
+                line-height: 1.4em;
                 display: flex;
                 flex-direction: column;
 
-                min-width: 350px;
+                min-width: 360px;
             }
             main {
                 flex: calc(100vh - var(--var-size-of-footer)) 3 0;
@@ -49,11 +57,11 @@
                 flex: var(--var-size-of-footer) 0 1;
             }
             .modal-window {
-                width: 350px;
+                width: 360px;
                 background-color: white;
                 border-radius: 20px;
                 border: 1px solid black;
-                padding: 15px;
+                padding: 1.3em;
 
                 margin: 10px auto;
 
@@ -62,9 +70,13 @@
             .modal-window img {
                 border-radius: 10px;
             }
+            .modal-window > *:not(:first-child):not(:last-child) {
+                margin: 0.7em 0;
+            }
             .lable {
-                border-radius: 0.4em;
-                padding: 0.1em 0.5em;
+                font-size: 14px;
+                border-radius: 0.3em;
+                padding: 0.2em 0.7em;
                 width: fit-content;
                 color: var(--var-color-black);
             }
@@ -81,15 +93,19 @@
             .author img {
                 width: 2em;
             }
+            .date {
+                font-size: 14px;
+            }
 
             .date *,
             .author * {
                 color: var(--var-color-black);
             }
-            main h1 {
-                color: var(--var-color-yellow);
+            .modal-window > h1 {
+                color: var(--var-color-black);
+                font-weight: 800;
             }
-            main p {
+            .modal-window > p {
                 color: var(--var-color-gray);
             }
             .attribution {
