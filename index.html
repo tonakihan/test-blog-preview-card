@@ -17,11 +17,10 @@
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
         <style>
             :root {
-                --yellow: hsl(47, 88%, 63%);
-                --var-color-bg: var(--yellow);
-                --var-color-font-1: hsl(0, 0%, 7%);
-                --var-color-font-2: hsl(0, 0%, 42%);
-                --var-color-font-h1: var(--yellow);
+                --var-color-yellow: hsl(47, 88%, 63%);
+                --var-color-gray: hsl(0, 0%, 42%);
+                --var-color-black: hsl(0, 0%, 7%);
+                --var-color-bg: var(--var-color-yellow);
                 --var-size-of-footer: 25px;
             }
             * {
@@ -56,7 +55,42 @@
                 border: 1px solid black;
                 padding: 15px;
 
-                margin: auto;
+                margin: 10px auto;
+
+                box-shadow: 8px 8px;
+            }
+            .modal-window img {
+                border-radius: 10px;
+            }
+            .lable {
+                border-radius: 0.4em;
+                padding: 0.1em 0.5em;
+                width: fit-content;
+                color: var(--var-color-black);
+            }
+            .lable[title="learn"] {
+                background-color: var(--var-color-yellow);
+            }
+            .author {
+                display: flex;
+                align-items: center;
+            }
+            .author > * {
+                margin-right: 1em;
+            }
+            .author img {
+                width: 2em;
+            }
+
+            .date *,
+            .author * {
+                color: var(--var-color-black);
+            }
+            main h1 {
+                color: var(--var-color-yellow);
+            }
+            main p {
+                color: var(--var-color-gray);
             }
             .attribution {
                 font-size: 11px;
@@ -70,8 +104,13 @@
     <body>
         <main>
             <article class="modal-window">
-                <div class="labels">
-                    <p><b>Learning</b></p>
+                <img
+                    src="assets/images/illustration-article.svg"
+                    width="100%"
+                    alt="illustration"
+                />
+                <div class="lable" title="learn">
+                    <span><b>Learning</b></span>
                 </div>
                 <div class="date">
                     <p>Published <time>21 Dec 2023</time></p>
@@ -81,7 +120,13 @@
                     These languages are the backbone of every website, defining
                     structure, content, and presentation.
                 </p>
-                <div class="author"><p>Greg Hooper</p></div>
+                <div class="author">
+                    <img
+                        src="assets/images/image-avatar.webp"
+                        alt="Avatar of the author"
+                    />
+                    <span><b>Greg Hooper</b></span>
+                </div>
             </article>
         </main>
 
