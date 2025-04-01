@@ -27,16 +27,20 @@
             * {
                 padding: 0;
                 margin: 0;
-                box-sizing: 0;
+                box-sizing: border-box;
             }
             body {
                 background-color: var(--var-color-bg);
                 font-size: 15px;
                 display: flex;
                 flex-direction: column;
+
+                min-width: 350px;
             }
             main {
                 flex: calc(100vh - var(--var-size-of-footer)) 3 0;
+
+                align-content: center;
             }
             footer {
                 background-color: #49463d;
@@ -44,6 +48,15 @@
                 width: 100%;
                 border-radius: 18px 18px 0 0;
                 flex: var(--var-size-of-footer) 0 1;
+            }
+            .modal-window {
+                width: 350px;
+                background-color: white;
+                border-radius: 20px;
+                border: 1px solid black;
+                padding: 15px;
+
+                margin: auto;
             }
             .attribution {
                 font-size: 11px;
